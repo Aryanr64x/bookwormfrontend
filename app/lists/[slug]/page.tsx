@@ -49,6 +49,8 @@ const ListBooksPage = async ({ params }: PageProps) => {
               authors={book.authors}
               slug={book.slug}
               key={book.id}
+              avg_review={book.avg_review}
+              review_count={book.review_count}
             />
           ))
         )}
