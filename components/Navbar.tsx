@@ -1,9 +1,19 @@
 'use client'
 
+import { authContext } from "@/app/contexts/AuthContextWrapper";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useContext, useReducer } from "react";
 
 
 const Navbar = ()=>{
+  const auth  = useContext(authContext)
+  const router = useRouter()
+  const logout = ()=>{
+    auth?.signout()
+    console.log('LOGING OUT BYE BYE')
+    router.replace('/')
+  }
    return (
     <nav className="flex justify-between items-center px-8 py-4 text-white">
       {/* Left Side: Logo */}
@@ -25,12 +35,13 @@ const Navbar = ()=>{
         >
           Reviews
         </Link>
-        <Link
-          href="/logout"
-          className="text-gray-300 hover:text-white transition-colors"
+        <button
+          onClick={logout}
+          className="text-gray-300 hover:text-white hover:cursor-pointer transition-colors"
+
         >
           Logout
-        </Link>
+        </button>
       </div>
     </nav>
   );

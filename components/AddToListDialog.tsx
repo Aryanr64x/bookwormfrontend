@@ -25,7 +25,7 @@ const AddToListDialog = ({book_id}: AddToListDialogProps)=>{
         className="bg-neutral-900 text-gray-100 border border-neutral-700 sm:max-w-md"
       >
         <DialogHeader>
-          <DialogTitle className="text-gray-50">Are you sure?</DialogTitle>
+          <DialogTitle className="text-gray-50">Choose your list </DialogTitle>
           <DialogDescription className="text-gray-400">
                <AddToList book_id={book_id}/>
           </DialogDescription>

@@ -39,13 +39,13 @@ const SignIn = ({ toggleSignIn }: Props)=>{
             Welcome Back
         </div>
         <div>
-             <Input placeholder="Please enter your username" className="mb-2 w-100" ref = {usernameEl}/>
+             <Input placeholder="Please enter your username" className="mb-2 w-100 rounded-none" ref = {usernameEl}/>
         </div>
        <div>
-         <Input type="password" placeholder="Please enter your password" className="mb-2 w-100" ref = {passwordEl} />
+         <Input type="password" placeholder="Please enter your password" className="mb-2 w-100 rounded-none" ref = {passwordEl} />
        </div>
-        <div className="flex justify-between">
-              <Button className="mr-2 hover:cursor-pointer" onClick={signin}>SIGN IN </Button>
+        <div className="flex justify-between mt-4">
+              <Button className="mr-2 hover:cursor-pointer bg-amber-700 hover:bg-amber-600 rounded-none" onClick={signin}>SIGN IN </Button>
 
               <button className="text-sm hover:cursor-pointer" onClick={toggleSignIn}>Don't have an account?</button>
         </div>

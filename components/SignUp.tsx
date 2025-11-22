@@ -60,7 +60,7 @@ const SignUp = ({ toggleSignIn }: Props) => {
       <div>
         <Input
           placeholder="Please enter your username"
-          className="mb-2 w-100"
+          className="mb-2 w-100 rounded-none"
           ref={usernameEl}
         />
       </div>
@@ -68,21 +68,21 @@ const SignUp = ({ toggleSignIn }: Props) => {
         <Input
           type="password"
           placeholder="Please enter your password"
-          className="mb-2 w-100"
+          className="mb-2 w-100 rounded-none"
           ref={passwordEl}
         />
       </div>
       <Input
         type="password"
         placeholder="Repeat your password"
-        className="mb-2 w-100"
+        className="mb-2 w-100 rounded-none"
         ref={repeatPasswordEl}
       />
-      <div className="flex justify-between">
-        <Button className="mr-2 hover:cursor-pointer" onClick={signup}>
+      <div className="flex justify-between mt-4">
+        <Button className="mr-2 hover:cursor-pointer bg-amber-700 hover:bg-amber-600 rounded-none" onClick={signup}>
           SIGN UP
         </Button>
-        <button className="text-sm hover:cursor-pointer" onClick={toggleSignIn}>
+        <button className="text-sm hover:cursor-pointer " onClick={toggleSignIn}>
           Already have an account?
         </button>
       </div>
