@@ -4,22 +4,25 @@ import { authContext } from "@/app/contexts/AuthContextWrapper";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useContext, useReducer } from "react";
+import Search from "./Search";
 
 
-const Navbar = ()=>{
-  const auth  = useContext(authContext)
+const Navbar = () => {
+  const auth = useContext(authContext)
   const router = useRouter()
-  const logout = ()=>{
+  const logout = () => {
     auth?.signout()
     console.log('LOGING OUT BYE BYE')
     router.replace('/')
   }
-   return (
-    <nav className="flex justify-between items-center px-8 py-4 text-white">
+  return (
+    <nav className="flex justify-between items-center px-8 py-4 text-white fixed top-0 left-0 w-full bg-black">
       {/* Left Side: Logo */}
       <Link href="/" className="text-2xl font-bold cursor-pointer">
         Bookworm
       </Link>
+      
+      <Search />
 
       {/* Right Side: Navigation Links */}
       <div className="flex gap-6">
